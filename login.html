@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login</title>
+    <script src="login.js"></script>
+</head>
+<body>
+    <header class = "headbar">
+        <!-- Wanderwise [LOGO] -->
+        <div class = "logo">
+            <a href = "index.html">
+                <img src = "wanderwiseicon-2.png" alt = "LOGO" >
+            </a>
+        </div> 
+   
+        <!-- Functionality Links -->
+        <nav class="headbarNav">
+            <ul>
+                <li> <button class = headbarButton><a href = "forum.html">Forum</a></button></li>
+                <li> <button class = headbarButton><a href = "browse.html">Browse</a></button></li>
+                <li> <button class = headbarButton><a href = "itinerary.html">Itinerary</a></button></li>
+            </ul>
+        </nav>
+
+        <!-- Account Icon -->
+        <div class="headbarAcct">
+            <div class="dropdown">
+                <a href="#"><img src="profile-icon.png" alt="profile" class="profileIcon"></a>
+                <div class="dropdown-content">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign-up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <img src = "wanderwiseicon.png" alt = "LOGO" class = "logo" > -->
+    </header>
+
+    <!-- Body of Main Dashboard -->
+    <main>
+        
+        <div class="center-box" id="login-div"> <!-- Login Account-->
+            <h2>Login</h2>
+            <input type="email" id="login-email" class="text-field" name ="login-email" placeholder="Email"/>
+            <input type="password" id="login-password" class="text-field" name ="login-password" placeholder="Password"/>
+            <button id="login-button" class="btn-style">Login</button><br>
+        </div>
+
+        <div id="result-box">
+            <h3 id="result"></h3>
+        </div>
+      
+        
+    </main>
+
+</body>
+</html>

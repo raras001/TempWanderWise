@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Signup</title>
+    <script src="login.js"></script>
+</head>
+<body>
+    <header class = "headbar">
+        <!-- Wanderwise [LOGO] -->
+        <div class = "logo">
+            <a href = "index.html">
+                <img src = "wanderwiseicon-2.png" alt = "LOGO" >
+            </a>
+        </div> 
+   
+        <!-- Functionality Links -->
+        <nav class="headbarNav">
+            <ul>
+                <li> <button class = headbarButton><a href = "forum.html">Forum</a></button></li>
+                <li> <button class = headbarButton><a href = "browse.html">Browse</a></button></li>
+                <li> <button class = headbarButton><a href = "itinerary.html">Itinerary</a></button></li>
+            </ul>
+        </nav>
+
+        <!-- Account Icon -->
+        <div class="headbarAcct">
+            <div class="dropdown">
+                <a href="#"><img src="profile-icon.png" alt="profile" class="profileIcon"></a>
+                <div class="dropdown-content">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign-up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <img src = "wanderwiseicon.png" alt = "LOGO" class = "logo" > -->
+    </header>
+
+    <!-- Main Dashboard-->
+    <main>
+        <div class="center-box" id="reg-div"><!--Register Account-->
+            <h2>Register</h2>
+            <input type="email" id="register-email" class="text-field" name ="register-email" placeholder="Email"/>
+            <input type="password" id="register-password" class="text-field" name ="register-password" placeholder="Password"/>
+            <button id ="register-btn" class="btn-style">Register</button><br>
+            
+        </div>
+    </main>
+
+</body>
+</html>
