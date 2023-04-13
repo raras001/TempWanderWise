@@ -1,26 +1,29 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBhzOapGVBOPyq2mmJb5IVLLpjK0TEE5lY",
-    authDomain: "wanderwise-f21a9.firebaseapp.com",
-    projectId: "wanderwise-f21a9",
-    storageBucket: "wanderwise-f21a9.appspot.com",
-    messagingSenderId: "799016861840",
-    appId: "1:799016861840:web:1403232429bfe801249815"
-  };
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBhzOapGVBOPyq2mmJb5IVLLpjK0TEE5lY",
+  authDomain: "wanderwise-f21a9.firebaseapp.com",
+  databaseURL: "https://wanderwise-f21a9-default-rtdb.firebaseio.com",
+  projectId: "wanderwise-f21a9",
+  storageBucket: "wanderwise-f21a9.appspot.com",
+  messagingSenderId: "799016861840",
+  appId: "1:799016861840:web:1403232429bfe801249815"
+};
 
+//Initialize Database
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth();
+const database = getDatabase(app);
 
 
 document.getElementById("login-button").addEventListener('click', function(){
-    console.log("Login button clicked!");
-    const loginEmail = document.getElementById("login-email").value;
-    const loginPassword = document.getElementById("login-password").value;
+  const loginEmail = document.getElementById("login-email").value;
+  const loginPassword = document.getElementById("login-password").value;
 
-    signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-  .then((userCredential) => {
+  signInWithEmailAndPassword(auth, loginEmail, loginPassword).then((userCredential) => {
     const user = userCredential.user;
     document.getElementById("result-box").style.display="inline";
     document.getElementById("login-div").style.display="none";
