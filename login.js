@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
-import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+//import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,12 +16,13 @@ const firebaseConfig = {
 //Initialize Database
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const database = getDatabase(app);
+//const database = getDatabase(app);
 
-
-document.getElementById("login-button").addEventListener('click', function(){
-  const loginEmail = document.getElementById("login-email").value;
-  const loginPassword = document.getElementById("login-password").value;
+//Logging in
+const login = document.getElementById("login-button");
+login.addEventListener("click", function(){
+const loginEmail = document.getElementById("login-email").value;
+const loginPassword = document.getElementById("login-password").value;
 
   signInWithEmailAndPassword(auth, loginEmail, loginPassword).then((userCredential) => {
     const user = userCredential.user;
@@ -38,3 +39,10 @@ document.getElementById("login-button").addEventListener('click', function(){
   });
     
 });
+
+
+//Registering WIP
+//const register = document.getElementById("register-button");
+//register.addEventListener("click", function(){
+
+//});
