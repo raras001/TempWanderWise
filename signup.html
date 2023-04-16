@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="styles.css" />
     <title>Signup</title>
-    <script src="login.js"></script>
+    <script type="module" src="login.js"></script>
 </head>
 <body>
     <header class = "headbar">
@@ -45,11 +45,17 @@
     <main>
         <div class="center-box" id="reg-div"><!--Register Account-->
             <h2>Register</h2>
-            <input type="email" id="register-email" class="text-field" name ="register-email" placeholder="Email"/>
-            <input type="password" id="register-password" class="text-field" name ="register-password" placeholder="Password"/>
-            <button id ="register-btn" class="btn-style">Register</button><br>
+            <input type="user-name" id="register-user" class="reg-text-field" name="register-user" placeholder="Username"/>
+            <input type="email" id="register-email" class="reg-text-field" name ="register-email" placeholder="Email"/>
+            <input type="password" id="register-password" class="reg-text-field" name ="register-password" placeholder="Password"/>
+            <button id ="register-button" class="btn-style">Register</button><br>
             
         </div>
+
+        <div id="result-box">
+            <h3 id="result"></h3>
+        </div>
+
     </main>
 
 </body>
