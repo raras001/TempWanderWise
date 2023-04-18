@@ -66,14 +66,15 @@ if (login) {
 
 
 
-//Registering WIP
+//Registering
 const register = document.getElementById("register-button");
 register.addEventListener("click", function(){
   const regEmail = document.getElementById("register-email").value;
   const regPassword = document.getElementById("register-password").value;
-  const regUser = document.getElementById("register-user").value;
+  const regFirst = document.getElementById("register-first").value;
+  const regLast = document.getElementById("register-last").value;
 
-  createUserWithEmailAndPassword(auth, regEmail, regPassword).then((userCredential)=>{
+  createUserWithEmailAndPassword(auth, regEmail, regPassword, regFirst, regLast).then((userCredential)=>{
     const user=userCredential.user;
     document.getElementById("result-box").style.display="inline";
     document.getElementById("reg-div").style.display="none";
@@ -81,8 +82,10 @@ register.addEventListener("click", function(){
 
     //save signup details in RT DB
     set(ref(database, 'users/'+ user.uid),{
-      regUser: regUser,
-      regEmail: regEmail
+      FirstName: regFirst,
+      LastName: regLast,
+      Email: regEmail
+
     })
 
     setTimeout(()=>{ //on success, redirect back to login page

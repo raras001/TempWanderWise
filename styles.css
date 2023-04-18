@@ -152,8 +152,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid black;
-  border-radius: 40px;
+  border: 3px solid black;
+  border-radius: 50px;
   width: 300px;
   height: 320px;
   text-align: center;
@@ -162,15 +162,28 @@
 /*[LOGIN] text field */
 .text-field{
   padding: 10px 20px;
-  margin: 20px 0;
+  margin: 20px 20px;
   border-radius: 10px;
   font-size: 12pt;
+}
+
+/* [Register] page */
+.reg-center-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid black;
+  border-radius: 50px;
+  width: 350px;
+  height: 380px;
+  text-align: center;
 }
 
 /*[REGISTER] text field */
 .reg-text-field{
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 10px 10px;
   border-radius: 10px;
   font-size: 12pt;
 }
